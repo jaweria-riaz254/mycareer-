@@ -7,14 +7,12 @@ import json
 # --- CONFIGURATION & SETUP ---
 load_dotenv()
 # api_key = os.getenv("GEMINI_API_KEY")
-
-if "GEMINI_API_KEY" in st.screats:
-    api_key=st.screats["GEMINI_API_KEY"]
+if "GEMINI_API_KEY" in st.secrets:
+    api_key=st.secrets["GEMINI_API_KEY"]
 else:
     api_key=os.getenv("GEMINI_API_KEY")
-    
-FILE_NAME = "chat_memory.json"
 
+FILE_NAME = "chat_memory.json"
 
 st.set_page_config(page_title="PathFinder AI", page_icon="🚀", layout="wide")
 
